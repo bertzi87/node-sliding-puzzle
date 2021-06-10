@@ -14,6 +14,7 @@ let puzzle = new Puzzle(process.argv[2] || 4);
 puzzle.shuffle()
 
 printBoard()
+console.log("Press 's' key to solve or play with arrow keys")
 
 // make `process.stdin` begin emitting "keypress" events
 keypress(process.stdin);
@@ -28,7 +29,7 @@ process.stdin.on('keypress', async function (ch, key) {
     case 'up':
       puzzle.move(key.name)
       printBoard()
-      console.log(key.name)
+//       console.log(key.name)
       return
     case 's':
       let solver = new Solver(puzzle)
