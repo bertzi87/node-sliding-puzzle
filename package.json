@@ -1,6 +1,6 @@
 {
   "name": "node-sliding-puzzle-solver",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Sliding puzzle game + solver",
   "main": "index.js",
   "scripts": {
