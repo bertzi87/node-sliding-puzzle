@@ -4,7 +4,8 @@
   "description": "Sliding puzzle game + solver",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "game": "node game.js"
   },
   "repository": {
     "type": "git",
