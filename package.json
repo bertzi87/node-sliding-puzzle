@@ -24,5 +24,12 @@
   "bugs": {
     "url": "https://github.com/bertzi87/node-sliding-puzzle/issues"
   },
-  "homepage": "https://github.com/bertzi87/node-sliding-puzzle#readme"
+  "homepage": "https://github.com/bertzi87/node-sliding-puzzle#readme",
+  "dependencies": {
+    "qheap": "^1.4.0"
+  },
+  "devDependencies": {
+    "jest": "^27.0.4",
+    "keypress": "^0.2.1"
+  }
 }
