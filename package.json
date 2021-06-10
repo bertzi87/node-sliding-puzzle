@@ -1,0 +1,28 @@
+{
+  "name": "sliding-puzzle",
+  "version": "1.0.0",
+  "description": "Sliding puzzle game + solver",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bertzi87/node-sliding-puzzle.git"
+  },
+  "keywords": [
+    "n-puzzle",
+    "solver",
+    "8-puzzle",
+    "15-puzzle",
+    "24-puzzle",
+    "game",
+    "a*-search"
+  ],
+  "author": "Albert László",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bertzi87/node-sliding-puzzle/issues"
+  },
+  "homepage": "https://github.com/bertzi87/node-sliding-puzzle#readme"
+}
