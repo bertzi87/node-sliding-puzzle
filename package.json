@@ -1,5 +1,5 @@
 {
-  "name": "sliding-puzzle",
+  "name": "node-sliding-puzzle-solver",
   "version": "1.0.0",
   "description": "Sliding puzzle game + solver",
   "main": "index.js",

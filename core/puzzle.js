@@ -9,30 +9,41 @@ module.exports = class Puzzle {
     this.indexOfEmpty = this.board.indexOf(0)
   }
 
-//   getSolvedBoard = () => [...Array(this.range).keys()].map(item => item == this.range - 1 ? 0 : item + 1)
-
-  getSolvedBoard = () => {
-    const solved = []
-    for (let i = 0; i < this.range - 1; i++) {
-      solved.push(i + 1)
-    }
-    solved[this.range - 1] = 0
-    return solved
+  getSolvedBoard() {
+    return [...Array(this.range).keys()].map(item => item == this.range - 1 ? 0 : item + 1)
   }
 
-  col = (index) =>  index % this.size
-  row = (index) => Math.floor(index / this.size)
+  col(index) {
+    return index % this.size
+  }
 
-//   indexOfEmpty = () => this.board.indexOf(0)
+  row(index) {
+    return Math.floor(index / this.size)
+  }
 
-  colOfEmpty = () => this.col(this.indexOfEmpty)
-  rowOfEmpty = () => this.row(this.indexOfEmpty)
+  colOfEmpty() {
+    return this.col(this.indexOfEmpty)
+  }
 
-  colDiff = (index1, index2) => this.col(index1) - this.col(index2)
-  rowDiff = (index1, index2) => this.row(index1) - this.row(index2)
+  rowOfEmpty() {
+    return this.row(this.indexOfEmpty)
+  }
 
-  colDiffEmpty = (index) => this.colDiff(this.indexOfEmpty, index)
-  rowDiffEmpty = (index) => this.rowDiff(this.indexOfEmpty, index)
+  colDiff(index1, index2) {
+    return this.col(index1) - this.col(index2)
+  }
+
+  rowDiff(index1, index2) {
+    return this.row(index1) - this.row(index2)
+  }
+
+  colDiffEmpty(index) {
+    return this.colDiff(this.indexOfEmpty, index)
+  }
+
+  rowDiffEmpty(index) {
+    return this.rowDiff(this.indexOfEmpty, index)
+  }
 
   swap(index1, index2) {
     [this.board[index1], this.board[index2]] = [this.board[index2], this.board[index1]]
@@ -154,7 +165,7 @@ module.exports = class Puzzle {
     return result
   }
 
-  manhattanDistance = (nr, currentIndex = false) => {
+  manhattanDistance(nr, currentIndex = false) {
     if (nr == 0) {
       return 0
     }
@@ -165,5 +176,7 @@ module.exports = class Puzzle {
     return Math.abs(this.colDiff(solvedIndex, currentIndex)) + Math.abs(this.rowDiff(solvedIndex, currentIndex))
   }
 
-  manhattanSum = () => this.board.reduce((sum, nr, index) => sum + this.manhattanDistance(nr, index), 0)
+  manhattanSum() {
+    return this.board.reduce((sum, nr, index) => sum + this.manhattanDistance(nr, index), 0)
+  }
 }
